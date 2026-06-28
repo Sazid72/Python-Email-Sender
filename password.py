@@ -1,0 +1,1 @@
+pwd = "YOUR_GMAIL_APP_PASSWORD"
