@@ -65,7 +65,7 @@ pwd = "YOUR_GMAIL_APP_PASSWORD"
 Run the program:
 
 ```bash
-python project.py
+python main.py
 ```
 
 The program will ask for:
@@ -82,11 +82,12 @@ If authentication succeeds, the email will be sent securely through Gmail's SMTP
 ## Project Structure
 
 ```
-.
-├── main.py
-├── password.py
-├── requirements.txt
-└── README.md
+Python-Email-Sender/
+│── project.py
+│── password.py     
+│── requirements.txt
+│── README.md
+│── .gitignore
 ```
 
 ---
@@ -103,6 +104,47 @@ The following modules are part of Python's standard library and do not require i
 - sys
 
 ---
+## Instructions
+
+1. Install the required dependency by running:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Create a file named `password.py` in the project directory and add your Gmail App Password:
+
+   ```python
+   pwd = "YOUR_16_CHARACTER_APP_PASSWORD"
+   ```
+
+3. To generate a Gmail App Password:
+
+   * Enable **2-Step Verification** on your Google account.
+   * Go to **Google Account → Security → App Passwords**.
+   * Select **Mail** as the app (or choose **Other** and give it a name).
+   * Generate the password and copy the 16-character code into `password.py`.
+
+4. Run the program:
+
+   ```bash
+   python main.py
+   ```
+
+5. When prompted, enter:
+
+   * Sender's email address
+   * Recipient's email address
+   * Email subject
+
+6. Enter the email body. You can type multiple lines.
+
+7. When you have finished writing the email body:
+
+   * **Windows:** Press **Ctrl + Z**, then press **Enter**.
+   * **Linux/macOS:** Press **Ctrl + D**.
+
+8. If the email addresses are valid, the Gmail App Password is correct, and an internet connection is available, the program will securely send the email through Gmail's SMTP server and display a confirmation message.
 
 ## License
 
